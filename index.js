@@ -112,7 +112,21 @@ function getPasswordOptions() {
         useNumeric = confirm("Include numeric characters?");
         useSpecial = confirm("Include special characters?");
 
-        
+        if (useLower || useUpper || useNumeric || useSpecial) {
+            // Display selected options
+            //using \n to create new line in string
+            const confirmationMessage = `Selected Options:\nPassword Length: ${passwordLength}\nInclude Lowercase: ${useLower}\nInclude Uppercase: ${useUpper}\nInclude Numeric: ${useNumeric}\nInclude Special: ${useSpecial}`;
+
+            // If user confirms, break out of the loop
+            if (confirm(confirmationMessage)) {
+                break;
+            }
+        } else {
+            alert("At least one character set must be selected. Please try again.");
+        }
+    }
+
+    
 
 
 // You can store the generatedPassword as a string and concat each character OR
