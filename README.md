@@ -4,6 +4,8 @@
 
 This repsository ("Password-Generator") aims to create functionality for users who access the related webpage to create their own unique password from an array of letters (uppercase and lowercase), numbers and special characters (if they choose to) for their own personal use in password management. The Javascript that follows should be functional and provide the necessary requirements that the user has input and result in a password that meets all of their choices throughout the process. It utilises many different methods to take the user through the function and should ideally prompt them before hitting 'enter' to make sure their choices are final.
 
+https://eatontechnology.github.io/Password-Generator/
+
 
 ## Table of Contents 
 
