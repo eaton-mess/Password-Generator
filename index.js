@@ -97,7 +97,6 @@ function getPasswordOptions() {
     let useLower, useUpper, useNumeric, useSpecial;
 
     while (true) {
-        // Validate password length
         while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
             alert("Please enter a valid number between 8 and 128.");
             passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
@@ -109,14 +108,11 @@ function getPasswordOptions() {
         useSpecial = confirm("Include special characters?");
 
         if (useLower || useUpper || useNumeric || useSpecial) {
-            // Display selected options
             const confirmationMessage = `Selected Options:\nPassword Length: ${passwordLength}\nInclude Lowercase: ${useLower}\nInclude Uppercase: ${useUpper}\nInclude Numeric: ${useNumeric}\nInclude Special: ${useSpecial}`;
 
-            // If user confirms, break out of the loop
             if (confirm(confirmationMessage)) {
                 break;
             } else {
-                // If user cancels, reset options and return to the first prompt
                 passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
                 continue;
             }
