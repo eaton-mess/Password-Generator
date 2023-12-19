@@ -100,7 +100,19 @@ function getPasswordOptions() {
         passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
     }
 
+    let useLower = false;
+    let useUpper = false;
+    let useNumeric = false;
+    let useSpecial = false;
 
+    //keep prompting until the user confirms the options or cancels
+    while (true) {
+        useLower = confirm("Include lowercase characters?");
+        useUpper = confirm("Include uppercase characters?");
+        useNumeric = confirm("Include numeric characters?");
+        useSpecial = confirm("Include special characters?");
+
+        
 
 
 // You can store the generatedPassword as a string and concat each character OR
