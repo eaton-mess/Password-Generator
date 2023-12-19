@@ -92,6 +92,16 @@ const upperCasedCharacters = [
 const charOptions = [];
 
 //My code
+function getPasswordOptions() {
+    let passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+
+    while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+        alert("Please enter a valid number between 8 and 128.");
+        passwordLength = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+    }
+
+
+
 
 // You can store the generatedPassword as a string and concat each character OR
 // as an array and push each character, then join once you have enough characters
