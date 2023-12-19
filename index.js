@@ -146,7 +146,20 @@ function getPasswordOptions() {
 
 function getRandom(arr, length) {
     let generatedPassword = '';
-    
+
+
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        generatedPassword += arr[randomIndex];
+    }
+
+    return generatedPassword;
+}
+
+function generatePassword() {
+    const { passwordLength, charOptions } = getPasswordOptions();
+    return getRandom(charOptions, passwordLength);
+}
 
 
 // You can store the generatedPassword as a string and concat each character OR
