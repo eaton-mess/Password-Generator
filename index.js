@@ -126,6 +126,26 @@ function getPasswordOptions() {
         }
     }
 
+    charOptions.length = 0;
+
+    if (useLower) {
+        charOptions.push(...lowerCasedCharacters);
+    }
+    if (useUpper) {
+        charOptions.push(...upperCasedCharacters);
+    }
+    if (useNumeric) {
+        charOptions.push(...numericCharacters);
+    }
+    if (useSpecial) {
+        charOptions.push(...specialCharacters);
+    }
+
+    return { passwordLength, charOptions };
+}
+
+function getRandom(arr, length) {
+    let generatedPassword = '';
     
 
 
