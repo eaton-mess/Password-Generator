@@ -23,7 +23,7 @@ This repository should display all necessary results that were requested by the 
 ## Author
 
 Lauren Eaton
-https://github.com/eatontechnology
+https://github.com/eaton-mess
 
 ## License
 
